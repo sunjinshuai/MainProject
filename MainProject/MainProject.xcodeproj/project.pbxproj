@@ -175,7 +175,6 @@
 				4C6A97CA1F0620C100B0316C /* Sources */,
 				4C6A97CB1F0620C100B0316C /* Frameworks */,
 				4C6A97CC1F0620C100B0316C /* Resources */,
-				1E855D117777A1D780389DF7 /* [CP] Embed Pods Frameworks */,
 				8AAC01EA4D4896E5814EC8DC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -296,34 +295,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1E855D117777A1D780389DF7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MainProject/Pods-MainProject-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8AAC01EA4D4896E5814EC8DC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MainProject/Pods-MainProject-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MYITGInterface/Base.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Base.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MainProject/Pods-MainProject-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MainProject/Pods-MainProject-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A04BC7C4F442C7A742175F81 /* [CP] Check Pods Manifest.lock */ = {

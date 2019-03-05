@@ -1,12 +1,27 @@
 PODS:
-  - MYProtocolManager (0.0.1)
+  - Masonry (1.1.0)
+  - MYITGInterface (0.0.1):
+    - Masonry
+    - MYITGInterface/Core (= 0.0.1)
+  - MYITGInterface/Base (0.0.1):
+    - Masonry
+  - MYITGInterface/Core (0.0.1):
+    - Masonry
+    - MYITGInterface/Base
 
 DEPENDENCIES:
-  - MYProtocolManager
+  - MYITGInterface
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Masonry
+  https://github.com/sunjinshuai/MYSpesc.git:
+    - MYITGInterface
 
 SPEC CHECKSUMS:
-  MYProtocolManager: 1c079d55bde78892aa918a5dbef2539eb69ca780
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MYITGInterface: be85cafa3aa24ff02cf5f8ab46e71dce81dda85a
 
-PODFILE CHECKSUM: ec00bb99249d674b7f326ee190015c0405c8b0cf
+PODFILE CHECKSUM: e6d252798ddfaaa52d77fb474502e3aa64735a2f
 
-COCOAPODS: 1.3.0.beta.2
+COCOAPODS: 1.6.0.beta.1
