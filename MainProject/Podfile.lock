@@ -1,27 +1,37 @@
 PODS:
-  - Masonry (1.1.0)
-  - MYITGInterface (0.0.1):
-    - Masonry
-    - MYITGInterface/Core (= 0.0.1)
-  - MYITGInterface/Base (0.0.1):
-    - Masonry
-  - MYITGInterface/Core (0.0.1):
-    - Masonry
-    - MYITGInterface/Base
+  - ComponentA (0.1.1):
+    - IMXInterface
+    - IMXModule
+    - IMXRoute
+  - ComponentB (0.1.1):
+    - IMXInterface
+    - IMXModule
+    - IMXRoute
+  - IMXInterface (0.1.0)
+  - IMXModule (0.1.0)
+  - IMXRoute (0.1.1)
 
 DEPENDENCIES:
-  - MYITGInterface
+  - ComponentA
+  - ComponentB
+  - IMXModule
+  - IMXRoute
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Masonry
   https://github.com/sunjinshuai/MYSpesc.git:
-    - MYITGInterface
+    - ComponentA
+    - ComponentB
+    - IMXInterface
+    - IMXModule
+    - IMXRoute
 
 SPEC CHECKSUMS:
-  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MYITGInterface: be85cafa3aa24ff02cf5f8ab46e71dce81dda85a
+  ComponentA: 25b3d8eb30eebfaca0f43a0d03a5d7c22c8094d6
+  ComponentB: 29d3f219217825f35ee4e1b97a3d22cccb529b5c
+  IMXInterface: e6e2d3af6e5f1d760624a0eb8aabceb7a93807b6
+  IMXModule: 0fd55d7499a91772f90ff4abe13b83db0a4fcbf9
+  IMXRoute: 8213d84dc3f7bc5e75eabb456cccd0d8d88956d0
 
-PODFILE CHECKSUM: e6d252798ddfaaa52d77fb474502e3aa64735a2f
+PODFILE CHECKSUM: 4bc145212cb6060f947ff77120311016161b2bcc
 
-COCOAPODS: 1.6.0.beta.1
+COCOAPODS: 1.7.3

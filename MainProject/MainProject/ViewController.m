@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <IMXRoute/IMXRoute.h>
 
 @interface ViewController ()
 
@@ -16,9 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    self.title = @"组件化 demo";
 }
 
+- (IBAction)componentA:(UIButton *)sender {
+    [IMXRoute handleURL:[NSURL URLWithString:@"sisi://componentA"]];
+}
+
+- (IBAction)componentB:(UIButton *)sender {
+
+    [IMXRoute handleURL:[NSURL URLWithString:@"sisi://componentB"]];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

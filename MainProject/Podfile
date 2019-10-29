@@ -1,11 +1,22 @@
-
+use_frameworks!
 source 'https://github.com/sunjinshuai/MYSpesc.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios , '9.0'
+platform :ios , '8.0'
+
+install! 'cocoapods',
+:deterministic_uuids => false,
+:generate_multiple_pod_projects => true,
+:lock_pod_sources => true,
+:preserve_pod_file_structure => true
 
 target 'MainProject' do
-    
-#    pod 'MYProtocolManager', :git => 'https://github.com/sunjinshuai/MYProtocolManager', :commit => 'af57c12756da069d46a5dfc5d725567c3459ac29'
-    pod 'MYITGInterface'
+#  基础组件
+    pod 'IMXModule'
+    pod 'IMXRoute'
+
+#  业务组件
+    pod 'ComponentA'
+    pod 'ComponentB'
+
 end

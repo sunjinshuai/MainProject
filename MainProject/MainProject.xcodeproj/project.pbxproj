@@ -15,7 +15,7 @@
 		4C6A97E11F0620C100B0316C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6A97DF1F0620C100B0316C /* LaunchScreen.storyboard */; };
 		4C6A97EC1F0620C100B0316C /* MainProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6A97EB1F0620C100B0316C /* MainProjectTests.m */; };
 		4C6A97F71F0620C100B0316C /* MainProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6A97F61F0620C100B0316C /* MainProjectUITests.m */; };
-		53FF1C84482B4068A98BC3B0 /* libPods-MainProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6F3499645A1B49C9572557 /* libPods-MainProject.a */; };
+		721D9C5EAF54129DC6177CD5 /* Pods_MainProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ADC8FD9AB0041F5DF13A749 /* Pods_MainProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2ADC8FD9AB0041F5DF13A749 /* Pods_MainProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MainProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FC3676DA99BDC322931C9E7 /* Pods-MainProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MainProject/Pods-MainProject.debug.xcconfig"; sourceTree = "<group>"; };
 		4C6A97CE1F0620C100B0316C /* MainProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6A97D21F0620C100B0316C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -54,7 +55,6 @@
 		4C6A97F61F0620C100B0316C /* MainProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainProjectUITests.m; sourceTree = "<group>"; };
 		4C6A97F81F0620C100B0316C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C60CC6107E163E3495422727 /* Pods-MainProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-MainProject/Pods-MainProject.release.xcconfig"; sourceTree = "<group>"; };
-		EB6F3499645A1B49C9572557 /* libPods-MainProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MainProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53FF1C84482B4068A98BC3B0 /* libPods-MainProject.a in Frameworks */,
+				721D9C5EAF54129DC6177CD5 /* Pods_MainProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +150,7 @@
 		6575417CDEAC5A52CA920B4D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EB6F3499645A1B49C9572557 /* libPods-MainProject.a */,
+				2ADC8FD9AB0041F5DF13A749 /* Pods_MainProject.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -175,7 +175,7 @@
 				4C6A97CA1F0620C100B0316C /* Sources */,
 				4C6A97CB1F0620C100B0316C /* Frameworks */,
 				4C6A97CC1F0620C100B0316C /* Resources */,
-				8AAC01EA4D4896E5814EC8DC /* [CP] Copy Pods Resources */,
+				2FCD86CF9DFB946CC5752578 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -295,22 +295,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8AAC01EA4D4896E5814EC8DC /* [CP] Copy Pods Resources */ = {
+		2FCD86CF9DFB946CC5752578 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MainProject/Pods-MainProject-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/MYITGInterface/Base.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-MainProject/Pods-MainProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ComponentA/ComponentA.framework",
+				"${BUILT_PRODUCTS_DIR}/ComponentB/ComponentB.framework",
+				"${BUILT_PRODUCTS_DIR}/IMXInterface/IMXInterface.framework",
+				"${BUILT_PRODUCTS_DIR}/IMXModule/IMXModule.framework",
+				"${BUILT_PRODUCTS_DIR}/IMXRoute/IMXRoute.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Base.bundle",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ComponentA.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ComponentB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IMXInterface.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IMXModule.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IMXRoute.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MainProject/Pods-MainProject-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MainProject/Pods-MainProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A04BC7C4F442C7A742175F81 /* [CP] Check Pods Manifest.lock */ = {

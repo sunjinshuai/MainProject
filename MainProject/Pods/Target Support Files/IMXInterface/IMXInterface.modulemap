@@ -1,0 +1,6 @@
+framework module IMXInterface {
+  umbrella header "IMXInterface-umbrella.h"
+
+  export *
+  module * { export * }
+}
